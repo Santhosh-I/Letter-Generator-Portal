@@ -1,7 +1,8 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
-import logo from '../assets/kite-logo.png'; 
+import logo from '../assets/kite-logo.png';
+import Kitelogo from '../assets/kite-logo.webp'; 
 import ipslogo from '../assets/ips.webp';
 
 const Template = () => {
@@ -108,7 +109,7 @@ const Template = () => {
       const logoWidth = 72;
       const logoHeight = 36;
       try {
-        pdf.addImage(logo, 'PNG', leftMargin + 8, yPos, logoWidth, logoHeight);
+        pdf.addImage(Kitelogo, 'PNG', leftMargin + 8, yPos, logoWidth, logoHeight);
       } catch (error) {
         console.log('Logo not loaded');
       }

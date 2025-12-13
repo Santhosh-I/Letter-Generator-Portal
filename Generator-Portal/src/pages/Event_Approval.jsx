@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
-// Import your logo from assets folder
-// Adjust the path as needed depending on where your logo is stored
+import Kitelogo from '../assets/kite-logo.webp'; 
 import logo from '../assets/kite-logo.png';
 import ipsLogo from '../assets/ips.webp';
 
@@ -204,7 +203,7 @@ const Template = () => {
 
       try {
         if (logo) {
-          pdf.addImage(logo, 'PNG', margin + 6, headerStartY + 8, 28, 22);
+          pdf.addImage(Kitelogo, 'PNG', margin + 6, headerStartY + 8, 28, 22);
         }
       } catch (e) {
         // ignore image errors
