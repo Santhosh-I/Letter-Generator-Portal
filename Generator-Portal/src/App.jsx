@@ -1,10 +1,16 @@
-import React from 'react'
-import Event_Approval from './pages/Event_Approval'
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import FacultyRequest from "./pages/Faculty_Request";
+import EventApproval from "./pages/Event_Approval";
 
-const App = () => {
+function App() {
   return (
-    <Event_Approval />
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Faculty_Request" element={<FacultyRequest />} />
+      <Route path="/Event_Approval" element={<EventApproval />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
